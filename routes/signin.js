@@ -11,7 +11,6 @@ router.get('/', checkNotLogin, (req, res, next) => {
 
 router.post('/', checkNotLogin, (req, res, next) => {
   const { name, password } = req.fields
-  console.log(req.fields)
   try {
     if (!name.length) {
       throw new Error('请填写用户名')

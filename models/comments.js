@@ -30,10 +30,6 @@ module.exports = {
   },
   // 通过文章id获取该文章下所有留言，按留言创建时间升序
   getComments (postId) {
-    console.log(Comment
-      .find({ postId })
-      .populate({ path: 'author', model: 'User' })
-      .sort({ _id: 1 }))
     return Comment
       .find({ postId })
       .populate({ path: 'author', model: 'User' })
