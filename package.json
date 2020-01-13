@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha"
+    "test": "istanbul cover _mocha",
+    "start": "cross-env NODE_ENV=production pm2 start index.js --name 'myblog'"
   },
   "author": "",
   "license": "ISC",
